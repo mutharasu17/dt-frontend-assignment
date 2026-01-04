@@ -1,4 +1,4 @@
-// tiny helper, nothing fancy
+// tiny helper
 const qs = (sel, ctx = document) => ctx.querySelector(sel);
 
 const jbOverlay = qs("#journeyBoard");
@@ -39,7 +39,7 @@ if (jbOverlay) {
   });
 }
 
-// quick accordion behavior for 4SA sections
+// quick accordion setup
 const accordHeads = document.querySelectorAll(".accord-head");
 
 accordHeads.forEach((head) => {
@@ -49,7 +49,7 @@ accordHeads.forEach((head) => {
 
     const isOpen = body.style.display !== "none";
 
-    // close all others (keeps things tidy)
+    // close all others 
     document.querySelectorAll(".accord-body").forEach((b) => {
       b.style.display = "none";
     });
@@ -61,7 +61,7 @@ accordHeads.forEach((head) => {
     }
   });
 
-  // start with bodies open for first load
+  //  open for first load
   const body = head.nextElementSibling;
   if (body) body.style.display = "block";
 });
