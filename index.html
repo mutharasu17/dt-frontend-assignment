@@ -2,103 +2,232 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DataFlow – Simple Team Analytics</title>
-  <meta
-    name="description"
-    content="Lightweight dashboards and basic automation for small product teams."
-  />
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <title>Technical Project Management - Deep Thought</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- top bar -->
-  <header class="site-header">
-    <div class="page-wrap">
-      <div class="header-inner">
-        <div class="logo-mark">DataFlow</div>
-        <nav class="main-nav">
-          <a href="#features">Features</a>
-          <a href="#plans">Plans</a>
-          <a href="#contact">Contact</a>
-          <button class="btn-secondary" type="button">Sign in</button>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <div class="page-wrap">
+    <!-- Left rail -->
+    <aside class="left-rail">
+      <button class="back-btn">&larr;</button>
+      <div class="step-pill">1</div>
+    </aside>
 
-  <main>
-    <!-- hero / first screen -->
-    <section class="hero-section">
-      <div class="page-wrap">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <h1 class="hero-title">
-              See what your product is doing in real time
-            </h1>
-            <p class="hero-text">
-              Skip the noisy charts. DataFlow gives you a small set of numbers
-              your team can actually talk about in stand‑ups.
-            </p>
-            <button class="btn-primary" type="button">
-              Start a free workspace
-            </button>
+    <!-- Main area -->
+    <div class="main-area">
+      <!-- Header  -->
+      <header class="top-bar">
+        <div class="brand">
+          <div class="brand-logo"></div>
+          <div class="brand-text">
+            <span class="brand-name">DEEP</span>
+            <span class="brand-name strong">THOUGHT</span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- core feature blocks -->
-    <section id="features" class="features-area">
-      <div class="page-wrap">
-        <header class="section-head">
-          <h2 class="section-title">Tools that don’t get in your way</h2>
-          <p class="section-kicker">
-            A few focused features for product, marketing, and support teams.
-          </p>
-        </header>
+        <h1 class="page-title">Technical Project Management</h1>
 
-        <!-- filled from script.js -->
-        <div id="feature-list" class="feature-list"></div>
-      </div>
-    </section>
-
-    <!-- pricing + JSON driven plans -->
-    <section id="plans" class="plans-area">
-      <div class="page-wrap">
-        <header class="section-head">
-          <h2 class="section-title">Pick a plan, change it later</h2>
-          <p class="section-kicker">
-            Simple pricing for growing teams. No setup fee, cancel any time.
-          </p>
-        </header>
-
-        <div class="billing-row">
-          <span class="billing-label">Monthly</span>
-          <button
-            id="billing-switch"
-            class="billing-switch"
-            type="button"
-            aria-label="Toggle billing period"
-          >
-            <span class="billing-slider"></span>
+        <div class="top-actions">
+          <button class="icon-btn" title="Journey Board" id="jbOpenBtn">
+            JB
           </button>
-          <span class="billing-label">
-            Yearly
-            <span class="save-pill">save a bit</span>
-          </span>
+          <button class="icon-btn" title="Home"></button>
+          <button class="icon-btn" title="Profile"></button>
+          <button class="icon-btn" title="Settings"></button>
+          <button class="submit-btn">Submit Task</button>
         </div>
+      </header>
 
-        <!-- plans are injected here -->
-        <div id="plan-list" class="plan-list"></div>
-      </div>
-    </section>
-  </main>
+      <!-- Intro banner -->
+      <section class="intro-card">
+        <h2>Explore the world of management</h2>
+        <p>
+          As a project manager, you play an important role in leading a project
+          through initiation, planning, execution, monitoring and completion.
+        </p>
+      </section>
 
-  <footer class="site-footer" id="contact">
-    <div class="page-wrap">
-      <p>© 2026 DataFlow. Built for small, slightly messy teams.</p>
+      <!-- Main  grid -->
+      <main class="content-grid">
+        <!-- Row 1 - left: video card -->
+        <article class="asset-card">
+          <header class="asset-header asset-header-dark">
+            <h3>Technical Project Management</h3>
+            <button class="asset-info-dot">i</button>
+          </header>
+          <div class="asset-body">
+            <p class="asset-desc">
+              <strong>Description:</strong>
+              Story of Alignment Scope of Agility Specific Accountable Staggering Approach.
+            </p>
+            <div class="video-shell">
+              <!-- just  YouTube thumbnail -->
+              <div class="video-thumb">
+                <div class="video-logo">▶</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 1  -->
+        <article class="asset-card">
+          <header class="asset-header asset-header-light">
+            <h3>Threadbuild</h3>
+            <button class="asset-info-dot">i</button>
+          </header>
+          <div class="asset-body">
+            <p class="asset-desc">
+              <strong>Description:</strong>
+              Watch the video and threadbuild, and jot out key threads while watching that video.
+            </p>
+
+            <div class="thread-header">
+              <span class="thread-title">Thread A</span>
+            </div>
+
+            <div class="thread-fields">
+              <div class="field-block">
+                <label>Sub Thread 1</label>
+                <textarea placeholder="Enter text here"></textarea>
+              </div>
+              <div class="field-block">
+                <label>Sub Interpretation 1</label>
+                <textarea placeholder="Enter text here"></textarea>
+              </div>
+            </div>
+
+            <div class="thread-toolbar">
+              <span class="tool-icon">💬</span>
+              <span class="tool-icon">📝</span>
+              <span class="tool-icon">📎</span>
+              <span class="tool-icon">⬇</span>
+            </div>
+
+            <div class="thread-footer">
+              <button class="subthread-btn">+ Sub thread</button>
+              <div class="select-row">
+                <select>
+                  <option>Select Category</option>
+                </select>
+                <select>
+                  <option>Select Process</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="summary-box">
+              <label>Summary for Thread A</label>
+              <textarea placeholder="Enter text here"></textarea>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 2 - left -->
+        <article class="asset-card">
+          <header class="asset-header asset-header-dark">
+            <h3>Structure You Pointers</h3>
+            <button class="asset-info-dot">i</button>
+          </header>
+          <div class="asset-body">
+            <p class="asset-desc">
+              <strong>Description:</strong>
+              Write a 400–500 word article from your thread. Publish your understanding and showcase your learning.
+            </p>
+            <div class="form-block">
+              <label>Title</label>
+              <input type="text" placeholder="Enter title here" />
+            </div>
+            <div class="form-block">
+              <label>Content</label>
+              <textarea class="editor-area" placeholder="Write your content here"></textarea>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 2 - right:  -->
+        <article class="asset-card">
+          <header class="asset-header asset-header-dark">
+            <h3>4SA Method</h3>
+            <button class="asset-info-dot">i</button>
+          </header>
+          <div class="asset-body">
+            <p class="asset-desc">
+              <strong>Description:</strong>
+              To explore more read more.
+            </p>
+
+            <!-- simple layout -->
+            <section class="accord-section">
+              <button class="accord-head">
+                <span>Introduction</span>
+                <span class="accord-toggle">˅</span>
+              </button>
+              <div class="accord-body">
+                <p>The 4SA Method, how to bring an idea into process?</p>
+                <a href="#" class="see-more">See more</a>
+              </div>
+            </section>
+
+            <section class="accord-section">
+              <button class="accord-head">
+                <span>Thread A</span>
+                <span class="accord-toggle">˅</span>
+              </button>
+              <div class="accord-body">
+                <p>
+                  How are you going to develop your strategy? Which method are you
+                  going to use to develop a strategy? What if the project is lengthy?
+                </p>
+                <a href="#" class="see-more">See more</a>
+              </div>
+            </section>
+
+            <section class="accord-section">
+              <button class="accord-head">
+                <span>Example 1</span>
+                <span class="accord-toggle">˅</span>
+              </button>
+              <div class="accord-body">
+                <p>You have a concept; how will you put it into practice?</p>
+              </div>
+            </section>
+          </div>
+        </article>
+      </main>
     </div>
-  </footer>
+
+    <!-- Right rail: notice board -->
+    <aside class="right-rail">
+      <div class="notice-strip">
+        <span class="notice-text">Notice Board</span>
+      </div>
+    </aside>
+
+    <!-- Floating FABs -->
+    <div class="fab-wrap">
+      <button class="fab-btn">?</button>
+      <button class="fab-btn">💬</button>
+      <button class="fab-btn">📅</button>
+    </div>
+
+    <!-- Journey Board  -->
+    <div class="jb-overlay" id="journeyBoard">
+      <div class="jb-panel">
+        <div class="jb-header">
+          <h2>Journey Board</h2>
+          <button class="jb-close" id="jbCloseBtn">✕</button>
+        </div>
+        <ul class="jb-list">
+          <li>Explore the world of management</li>
+          <li>Technical Project Management</li>
+          <li>Threadbuild</li>
+          <li>Structure you pointers</li>
+          <li>4SA Method</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
