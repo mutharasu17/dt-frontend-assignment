@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataFlow – Simple Team Analytics</title>
+  <meta
+    name="description"
+    content="Lightweight dashboards and basic automation for small product teams."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- top bar -->
+  <header class="site-header">
+    <div class="page-wrap">
+      <div class="header-inner">
+        <div class="logo-mark">DataFlow</div>
+        <nav class="main-nav">
+          <a href="#features">Features</a>
+          <a href="#plans">Plans</a>
+          <a href="#contact">Contact</a>
+          <button class="btn-secondary" type="button">Sign in</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- hero / first screen -->
+    <section class="hero-section">
+      <div class="page-wrap">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 class="hero-title">
+              See what your product is doing in real time
+            </h1>
+            <p class="hero-text">
+              Skip the noisy charts. DataFlow gives you a small set of numbers
+              your team can actually talk about in stand‑ups.
+            </p>
+            <button class="btn-primary" type="button">
+              Start a free workspace
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- core feature blocks -->
+    <section id="features" class="features-area">
+      <div class="page-wrap">
+        <header class="section-head">
+          <h2 class="section-title">Tools that don’t get in your way</h2>
+          <p class="section-kicker">
+            A few focused features for product, marketing, and support teams.
+          </p>
+        </header>
+
+        <!-- filled from script.js -->
+        <div id="feature-list" class="feature-list"></div>
+      </div>
+    </section>
+
+    <!-- pricing + JSON driven plans -->
+    <section id="plans" class="plans-area">
+      <div class="page-wrap">
+        <header class="section-head">
+          <h2 class="section-title">Pick a plan, change it later</h2>
+          <p class="section-kicker">
+            Simple pricing for growing teams. No setup fee, cancel any time.
+          </p>
+        </header>
+
+        <div class="billing-row">
+          <span class="billing-label">Monthly</span>
+          <button
+            id="billing-switch"
+            class="billing-switch"
+            type="button"
+            aria-label="Toggle billing period"
+          >
+            <span class="billing-slider"></span>
+          </button>
+          <span class="billing-label">
+            Yearly
+            <span class="save-pill">save a bit</span>
+          </span>
+        </div>
+
+        <!-- plans are injected here -->
+        <div id="plan-list" class="plan-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="page-wrap">
+      <p>© 2026 DataFlow. Built for small, slightly messy teams.</p>
+    </div>
+  </footer>
+</body>
+</html>
